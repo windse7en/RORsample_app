@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
   get "staic_pages/home"
   get "staic_pages/help"
+  get "staic_pages/about"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -18,7 +19,7 @@ SampleApp::Application.routes.draw do
 
   # Example resource route with options:
   #   resources :products do
-  #     member do
+  #     member doou
   #       get 'short'
   #       post 'toggle'
   #     end
