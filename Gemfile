@@ -5,6 +5,7 @@ ruby '2.1.2'
 gem 'rails', '4.0.4'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '~>3.1.5'
+gem 'faker', '1.4.3'	#this gem is used for fake all kinds of data.
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

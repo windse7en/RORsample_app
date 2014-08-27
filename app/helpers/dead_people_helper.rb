@@ -1,0 +1,2 @@
+module DeadPeopleHelper
+end

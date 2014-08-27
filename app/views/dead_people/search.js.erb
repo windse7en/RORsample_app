@@ -1,0 +1,16 @@
+head = '<table class="table table-bordered" id="list_result">';
+$("#myModalDP").empty();
+$("#myModalDP").append(head);	
+$("#list_result").append('<thead><tr><td>First Name</td><td>Last Name</td><td>Date of Birth</td><td>Date of Death</td></tr></thead><tbody>');
+<% for output in @deadpeople %>
+	$("#list_result").append('<tr>');
+	$("#list_result").append('<td><%= output.first_name %></td>');
+	$("#list_result").append('<td><%= output.last_name %></td>');
+	$("#list_result").append('<td><%= output.dob.to_s %></td>');
+	$("#list_result").append('<td><%= output.dod.to_s %></td>');
+	$("#list_result").append('</tr>');
+<% end %>
+
+tail = '</tbody></table>'
+$("#myModalDP").append(tail);
+$("#myModal").modal('show');

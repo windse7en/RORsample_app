@@ -7,6 +7,39 @@
     <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
     sample application.
   </h2>
+  <%= form_tag("dead_people/search", method: "get", remote: 'true') do %>
+  <%= label_tag(:last_name, "Last Name:") %>
+  <%= text_field_tag(:last_name) %>
+  <%= label_tag(:first_name, "First Name:") %>
+  <%= text_field_tag(:first_name) %>
+
+  <%= submit_tag "Search" %>
+  <!-- <input name="commit" type="submit" value="Search" data-toggle="modal" data-target="#myModal"> -->
+	<% end %>
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">People Information</h4>
+      </div>
+      <div class="modal-body" id="myModalDP">
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="panel panel-default" id="result" style="display: none;" >
+      <div class="panel-heading"><h3 class="panel-title">Search Result</h3></div>
+      <div class="panel-body" id="result_people">
+      </div>
+  </div>
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 </div>

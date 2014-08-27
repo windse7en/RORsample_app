@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+ class UsersController < ApplicationController
 	
   def new
   	@user = User.new
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
+      sign_in @user
   		flash[:success]='Welcome to our blog new world'
   		redirect_to @user
   	else
